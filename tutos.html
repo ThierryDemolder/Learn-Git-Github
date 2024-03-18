@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Git Tutorial</title>
+
+</head>
+<body>
+   
+    <div class="container">
+    <h1>Basic Git Tutorial</h1>
+        <p>Let's get started with Git! Below are some useful commands to help you manage your project.</p>
+        
+        <h2>1. Set Up Your Identity</h2>
+            <p>Before diving into Git, let's tell it who you are. Use these commands to set up your name and email. It's like signing your name on your work!</p>
+            <pre><code>$ git config --global user.name "Thierry Demolder"
+$ git config --global user.email "tdemolder@gmail.com"</code></pre>
+
+        <h2>2. Set Default Branch Name</h2>
+            <p>Git recently changed the name of the main branch from "master" to "main" to be more inclusive. Let's make sure Git knows about it:</p>
+            <pre><code>$ git config --global init.default branch main</code></pre>
+
+        <h2>3. Navigate to Your Project Directory</h2>
+            <p>Use the <code>cd</code> command to go to the main folder of your project. This is where all your project files live.</p>
+            <pre><code>$ cd path/to/your/project</code></pre>
+
+        <h2>4. Initialize Your Repository</h2>
+            <p>Now that you're in your project folder, let's initialize a Git repository. It's like telling Git, "Hey, keep an eye on these files!"</p>
+            <pre><code>$ git init</code></pre>
+
+        <h2>5. Add Files to the Staging Area</h2>
+            <p>You've got all these files in your project folder. Let's tell Git to start tracking changes to them.</p>
+            <pre><code>$ git add index.htm     # Add a specific file
+$ git add .             # Add all files in the directory
+$ git add --all         # Add all files, including deleted ones
+$ git -A                # Shorthand for adding all files</code></pre>
+
+        <h2>6. Manipulate Your Files</h2>
+            <p>Now, let's manipulate our files a bit. We'll learn how to erase, restore, track, and untrack them.</p>
+            <ul>
+                <li>To delete a file: <code>rm filename</code></li>
+                <li>To restore a deleted file: <code>git checkout -- filename</code></li>
+                <li>To track a new file: <code>git add filename</code></li>
+                <li>To untrack a file: <code>git reset HEAD filename</code></li>
+                <li>Checking your current situation <code> git status</code></li>
+                <li>Unstage a file<code>git rm --cached</code></li>
+                <li>Commit your files<code>git commit -m "reason of the commit"</code></li>
+                <li>Check the difference between the former file and the new modified one <code>git diff</code></li>
+            </ul>
+
+        <h2>7. Create a <code>.gitignore</code> File</h2>
+            <p>Sometimes, there are files you don't want Git to track, like temporary files or sensitive information. Create a <code>.gitignore</code> file and list those files there.</p>
+            <pre><code>$ touch .gitignore     # Create a .gitignore file</code></pre>
+                
+        <h2>8. Check Your Commit History (Logs)</h2>
+            <p>It's good to keep track of what you've done. Let's check the commit history.</p>
+        <pre><code>$ git log</code></pre>
+        <pre><code>$ git log --oneline</code></pre>
+
+        <h2>9. Take a Snapshot of Your Repository</h2>
+            <p>You've made some changes, and you want to save them. Let's take a snapshot (commit) of your project.</p>
+        <pre><code>$ git commit -m "first commit - committing all files to the repository"</code></pre>
+
+        <h2>10. Link Your Local Repository to GitHub</h2>
+            <p>Time to share your project with the world! We'll link your local repository to a remote one on GitHub.</p>
+        <pre><code>$ git remote add origin https://github.com/ThierryDemolder/Vins-Deconinck.git</code></pre>
+
+        <h2>11. Rename Your Branch (Optional)</h2>
+            <p>Sometimes, it's necessary to rename branches. In this case, let's rename our main branch to make sure it matches with GitHub.</p>
+        <pre><code>$ git branch -M main</code></pre>
+
+        <h2>12. Push Your Changes to GitHub</h2>
+            <p>Finally, let's send your project up to GitHub so everyone can see your awesome work!</p>
+        <pre><code>$ git push -u origin main</code></pre>
+
+            <p>And there you have it! Your project is now on GitHub. 🚀</p>
+    </div>
+</body>
+</html>
+
+<!--
+Source of inspiration to learn git
+https://www.youtube.com/watch?v=tRZGeaHPoaw 
+https://www.youtube.com/watch?v=l2yrJtwoC_E
+https://www.youtube.com/watch?v=3fUbBnN_H2c
+https://www.youtube.com/playlist?list=PL4cUxeGkcC9goXbgTDQ0n_4TBzOO0ocPR
+https://www.youtube.com/watch?v=RGOj5yH7evk
+https://www.youtube.com/watch?v=RGOj5yH7evk
+
+-->
